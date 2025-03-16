@@ -64,7 +64,7 @@ RB = 17k$\ohm$ , valeur normalisée : 18k$\ohm$
 
 ## Problème !
 
-Notre coupe RA-RB nous empêchez de descendre en dessous de 26% de rapport cyclique or on souhaite définir un rapport cyclique de 20% donc on change les résistances.
+Notre couple de résistances RA-RB nous empêchait de descendre en dessous d’un rapport cyclique de 26 %. Or, nous souhaitons atteindre un rapport cyclique de 20 %, donc nous modifions les résistances.
 
 On obtient 
 - RA =4.3k$\ohm$ et RB = 14k$\ohm$. 
