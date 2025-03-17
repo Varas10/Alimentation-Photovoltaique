@@ -14,7 +14,7 @@ avec le potentiomètre
 
 Grâce au potentiomètre on peut modifier la largeur des impulsion ce qui permet de modifier le rapport cyclique.
 
-La diode permet de laisser passer ou non le courant en fonction de si le condensateur est en charge ou décharge.
+La diode fait passer le courant jusqu'au condensateur lorsqu'il est en charge.
 
 En charge le courant passe par RA et la diode, et en décharge il passe par RB et va dans le 555
 
@@ -59,12 +59,20 @@ avec
 RA = 6.4k$\ohm$ , valeur normalisée : 6.8k$\ohm$ 
 RB = 17k$\ohm$ , valeur normalisée : 18k$\ohm$ 
 
-<span style="color:rgb(192, 0, 0)">FAIRE LES TEST EN SIMULATION </span>
+## Simulation :
+pour V1=16v ou pour V1=22V, les rapports cyclique et tensions de sortie sont identique.
+
+| Position du Potentiometre | rapport cyclique prévue | rapport cyclique obtenue | fréquence d'oscillation observée |
+| ------------------------- | ----------------------- | ------------------------ | -------------------------------- |
+| Haute(x=0)                | 19.5%                   | 21%                      | 40,2kHz                          |
+| Basse (x=100%)            | 48%                     | 50%                      | 39,5kHz                          |
+
+
 # Mesures et chronogrammes
 
 ## Problème !
 
-Notre couple de résistances RA-RB nous empêchait de descendre en dessous d’un rapport cyclique de 26 %. Or, nous souhaitons atteindre un rapport cyclique de 20 %, donc nous modifions les résistances.
+Notre coupe RA-RB nous empêchez de descendre en dessous de 26% de rapport cyclique or on souhaite définir un rapport cyclique de 20% donc on change les résistances.
 
 On obtient 
 - RA =4.3k$\ohm$ et RB = 14k$\ohm$. 
@@ -94,4 +102,11 @@ En position haute, le rapport cyclique doit être le minimum voulu :
 | ---------- | ------------------------------------ | ---------------------------------- | ----------------------------- | ---------------------------- |
 | monte      | haut pendant 44$\micro$s             | $t_{1}=0.693(RA+P)C = 2.7\micro s$ | 19.6%                         | 13.5%                        |
 | descend    | bas pendant 16.4$\micro$s            | $t_{2}=0.693RB*C = 17.3\micro s$   |                               |                              |
+
+# Conclusion :
+Donc nous avons assemblé la partie commande :
+- Grâce à la PWM, on peut adapté le rapport cyclique par rapport à nos besoins(20% - > 50%).
+- De plus, les résistances choisis sont calculer pour obtenir une tension de sortie adéquate.
+- Alors on peut alimenter une carte Altera en 7.5V ou un téléphone portable en 5V.
+
 
