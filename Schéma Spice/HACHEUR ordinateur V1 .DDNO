@@ -1,0 +1,184 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                   Dynamic DC of HACHEUR ordinateur V1                    ***
+***                           27/01/2025 09:40:52                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node                                Voltage 
+TENSION_CONTINUE_ENTREE_HACHEUR     35.000  
+2                                  681.320u 
+TENSION_SORTIE_INTERRUPTEUR        681.320u 
+TENSION_SORTIE_HACHEUR             681.320u 
+5                                   35.000  
+
+DC Operating Point Inductor Current
+===================================
+                       Inductor     Current 
+L1                                 116.664u 
+L2                                 116.664u 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D2
+Using model:        UTX4115
+
+Capacitance Terms:
+CAP                 76.992p
+
+Current Terms:
+ID                  -3.954p
+
+Resistance Terms:
+REQ              172.334MEG
+
+Voltage Terms:
+VD                -681.320u
+
+Power DC Terms:
+PD                   2.694f
+PS                   0.000 
+
+DC Pin Currents:
+Id                  -3.954p
+
+Condition:
+State                   OFF
+
+Device Variables:
+area                 1.000 
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Mosfet NMOS
+===============================================
+Instance:                Q1
+Using model:         IRF151
+
+Capacitance Terms:
+CBD                848.932p
+CBS                  0.000 
+CGSOVL             803.588p
+CGDOVL             780.060p
+CGBOVL               0.000 
+CGS                  0.000 
+CGD                  0.000 
+CGB                  0.000 
+
+Conductance Terms:
+GM                   0.000 
+GDS                  0.000 
+GMBS                 0.000 
+
+Current Terms:
+ID                 116.664u
+
+Voltage Terms:
+VGS                  0.000 
+VDS                 34.999 
+VBS                  0.000 
+VGB                  0.000 
+VGD                -34.999 
+VDB                 34.999 
+VTH                  3.000 
+VDSAT                0.000 
+
+Power DC Terms:
+PD                   4.083m
+PS                   0.000 
+
+DC Pin Currents:
+Ig                   0.000 
+Id                 116.664u
+Is                -116.664u
+Ib                 -35.009p
+
+Condition:
+State                   OFF
+
+Device Variables:
+m                    1.000 
+l                    0.000 
+w                    0.000 
+ad                   0.000 
+as                   0.000 
+pd                   0.000 
+ps                   0.000 
+nrd                  0.000 
+nrs                  0.000 
+nrb                  0.000 
+nrg                  0.000 
+vds                  0.000 
+vgs                  0.000 
+vbs                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1
+V                  -681.320u
+Power DC Terms:
+PD                   79.486n
+
+DC Pin Currents:
+Ir                 -116.664u
+
+Device Variables:
+tc1                   0.000 
+tc2                   0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                 L1             L2
+V                -1.084E-019         0.000 
+Power DC Terms:
+PS               -1.265E-023         0.000 
+
+DC Pin Currents:
+Il                  116.664u       116.664u
+
+Device Variables:
+ic                    0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2
+V                   681.320u        35.000 
+Power DC Terms:
+PS                    0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1           VCOM
+V                   35.000          0.000 
+Power DC Terms:
+PG                   4.083m         0.000 
+
+DC Pin Currents:
+ISource           -116.664u    -1.355E-020
+
+

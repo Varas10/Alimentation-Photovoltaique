@@ -1,0 +1,47 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                  Dynamic DC of pont_diviseur_ordinateur                  ***
+***                           27/01/2025 09:04:03                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage 
+1            19.501   2            35.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            R2            R3
+V                  -15.499       -19.501       -19.501 
+Power DC Terms:
+PD                 189.138       172.867        65.121 
+
+DC Pin Currents:
+Ir                 -12.204        -8.864        -3.339 
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1
+V                  35.000 
+Power DC Terms:
+PG                427.125 
+
+DC Pin Currents:
+ISource           -12.204 
+
+
