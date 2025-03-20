@@ -29,14 +29,15 @@ De plus on ne connait pas $I_{R_{1}}$ cependant on peut utilisé la loi des nœu
 Désormais on peut calculer $R_{1}$ :
 - $R_{1}=\frac{V_{1}-V_{z}}{I_{z}+I_{osc}}=\frac{16-15}{(1+1,5)*10^{-3}}=400\ohm$ 
 
-# Schéma :
+# Etude de la fonction 3 seule :
+## Schéma :
 
 Voici le schéma que l'on vas utiliser pour les simulations :
 ![[F3 seule.png]]
 
 La diode Zener est en parallèle avec la résistance équivalente de l'oscillateur. La diode Zener étant à 15V, la tension de sortie Vs seras elle aussi à 15V.
 
-# Simulations :
+## Simulations :
 
 On fait une simulation sur *Spice* avec l'analyse en **Dynamic DC** et on obtient les résultats suivant :
 
@@ -51,7 +52,16 @@ De plus, la puissance fourni par le panneau sollaire est presque entièrement ab
 Par contre on rencontre un problème :
 - Le courant passant dans la diode Zener est largement inférieur à 1mA alors qu'il doit être au minimum de 1mA.
 
-# Simulation de la fonction 3 relié à la partie commande :
+# Etude de la fonction 3 relié à la partie commande :
+
+## Schéma :
+
+On va simulé ce montage :
+![[F3 relié à F2.png]]
+
+On remplace la résistance équivalent de l'oscillateur par le montage oscillateur. La diode Zener est bien en parallèle avec le montage oscillateur.
+
+## Simulation :
 
 On va simulé avec l'analyse transient pour observé le comportement des deux fonctions ensemble :
 
@@ -65,13 +75,4 @@ On constate que la tension fourni est toujours de 15V.
 On respecte bien le cahier des charges !
 
 D'après le schéma et l'analyse transient la tensions de sortie du 555 est toujours de 24mV lorsque le panneau varie entre 16v et 22V. Cela explique pourquoi le rapport cyclique et la fréquence ne changent pas.
-
-
-
-
-
-
-# F3(Alim partie commande) relié à F2 (partie commande) :
-![[F3 relié à F2.png]]
-
-On remplace la résistance équivalent de l'oscillateur par le montage oscillateur. La diode Zener est bien en parallèle avec le montage oscillateur.
+oscillateur 
