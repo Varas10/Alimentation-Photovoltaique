@@ -4,11 +4,11 @@ Version=12.00
 Program=Micro-Cap
 Component Version=10.00
 Shape Version=11.00
-Screen=1280,720
+Screen=1920,1080
 MCAPVersion=12.2.0.3
 Key ID=Demo
-NLCnt=42
-TXCnt=2
+NLCnt=52
+TXCnt=4
 
 [shapedef]
 Name=555
@@ -96,24 +96,17 @@ PolyLine=48,0
 PolyLine=48,0
 Current=32,8,16,8
 
-[compdef]
-Name=Battery
-Definition=Battery
-Shape=Battery
-Mask=7425
-Used=61
-memo=Battery
-Label Offset=19,7,10,13
-PinCnt=2
-Pin="Plus",6,0,-4,-5
-Pin="Minus",0,0,-10,-5
+[shapedef]
+Name=Zener
+Root="Diode.root",0,0,0
+Rectangle=16,-9,20,-8
+Rectangle=18,8,22,9
 
 [compdef]
 Name=555
 Definition=Macro
 Shape=555
 Mask=20480
-Used=2
 memo=555 Timer Macro
 Label Offset=87,72,-20,88
 PinCnt=8
@@ -131,7 +124,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=281
+Used=257
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -142,7 +135,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=30
+Used=22
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -154,7 +147,7 @@ Name=D1N4148
 Definition=Diode
 Shape=Diode
 Mask=5504
-Used=11
+Used=9
 memo=On Semi
 Label Offset=17,10,12,12
 PinCnt=2
@@ -165,8 +158,8 @@ Pin="Cathode",0,0,-20,-8
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6401
-Used=187
+Mask=6913
+Used=152
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -178,13 +171,36 @@ Name=Pot
 Definition=Macro
 Shape=Pot
 Mask=4096
-Used=1
 memo=Potentiometer Macro
 Label Offset=32,4,9,11
 PinCnt=3
 Pin="PINA",a,0,0,-13,-5
 Pin="PINB",a,3,2,6,5
 Pin="PINC",a,6,0,-12,-5
+
+[compdef]
+Name=Zener
+Definition=Diode
+Shape=Zener
+Mask=4352
+Used=2
+memo=Zener diode
+Label Offset=16,11,16,11
+PinCnt=2
+Pin="Anode",6,0,-14,-2
+Pin="Cathode",0,0,-26,-2
+
+[compdef]
+Name=Battery
+Definition=Battery
+Shape=Battery
+Mask=6913
+Used=53
+memo=Battery
+Label Offset=19,7,10,13
+PinCnt=2
+Pin="Plus",6,0,-4,-5
+Pin="Minus",0,0,-10,-5
 
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 118,182,1411,651
@@ -216,61 +232,36 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Wire]
-Pxs=152,136,152,216
+Pxs=696,264,856,264
 
 [Wire]
-Pxs=152,136,312,136
-
-[Comp]
-Name=Battery
-Px=152,264
-Rot=5
-
-[Attr]
-ON=10,-27,PART
-V=V1
-Style=8192
-
-[Attr]
-ON=10,-41,VALUE
-V=15V
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
+Pxs=496,624,880,624
 
 [Wire]
-Pxs=152,264,152,424
+Pxs=792,352,824,352
 
 [Wire]
-Pxs=152,424,336,424
+Pxs=792,352,792,384
 
 [Wire]
-Pxs=248,224,280,224
+Pxs=792,384,824,384
 
 [Wire]
-Pxs=248,224,248,256
+Pxs=792,384,792,496
 
 [Wire]
-Pxs=248,256,280,256
+Pxs=792,496,984,496
 
 [Wire]
-Pxs=248,256,248,368
+Pxs=856,264,856,312
 
 [Wire]
-Pxs=248,368,440,368
-
-[Wire]
-Pxs=312,136,312,184
-
-[Wire]
-Pxs=312,136,328,136
+Pxs=856,264,872,264
 
 [Comp]
 Name=555
 ShowPackagePins=True
-Px=296,192
+Px=840,320
 
 [Attr]
 ON=8,19,PART
@@ -291,46 +282,43 @@ ON=0,125,OPTIONAL
 V=V555_VDD=$G_555_VDD
 
 [Wire]
-Pxs=328,136,328,184
+Pxs=872,264,872,312
 
 [Wire]
-Pxs=328,136,576,136
+Pxs=872,264,1120,264
 
 [Wire]
-Pxs=336,296,336,424
+Pxs=880,424,880,624
 
 [Wire]
-Pxs=336,424,576,424
-
-[Wire]
-Pxs=336,424,336,432
+Pxs=880,624,1120,624
 
 [Comp]
 Name=Ground
-Px=336,432
+Px=880,624
 Rot=7
 
 [Wire]
-Pxs=360,152,360,184
+Pxs=904,280,904,312
 
 [Wire]
-Pxs=360,152,424,152
+Pxs=904,280,968,280
 
 [Wire]
-Pxs=392,224,400,224
+Pxs=936,352,944,352
 
 [Wire]
-Pxs=392,256,440,256
+Pxs=936,384,984,384
 
 [Wire]
-Pxs=400,224,400,232
+Pxs=944,352,944,360
 
 [Wire]
-Pxs=400,232,456,232
+Pxs=944,360,1000,360
 
 [Comp]
 Name=Capacitor
-Px=424,200
+Px=968,328
 Rot=5
 
 [Attr]
@@ -349,18 +337,18 @@ V
 
 [Comp]
 Name=Ground
-Px=424,200
+Px=968,328
 Rot=7
 
 [Wire]
-Pxs=440,256,440,280
+Pxs=984,384,984,408
 
 [Wire]
-Pxs=440,256,560,256
+Pxs=984,384,1104,384
 
 [Comp]
 Name=D1N4148
-Px=440,328
+Px=984,456
 Rot=5
 
 [Attr]
@@ -377,22 +365,22 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=440,328,440,368
+Pxs=984,456,984,496
 
 [Wire]
-Pxs=440,368,576,368
+Pxs=984,496,1120,496
 
 [Wire]
-Pxs=456,232,464,232
+Pxs=1000,360,1008,360
 
 [Wire]
-Pxs=576,136,576,152
+Pxs=1120,264,1120,280
 
 [Comp]
 Name=Resistor
-Px=576,200
+Px=1120,328
 Rot=3
-COff=7,588,174,34,-22
+COff=7,1132,302,34,-22
 
 [Attr]
 ON=-27,-40,PART
@@ -408,11 +396,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=576,200,576,232
+Pxs=1120,328,1120,360
 
 [Comp]
 Name=Pot
-Px=576,232
+Px=1120,360
 Rot=1
 
 [Attr]
@@ -439,13 +427,13 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=576,280,576,304
+Pxs=1120,408,1120,432
 
 [Comp]
 Name=Resistor
-Px=576,352
+Px=1120,480
 Rot=3
-COff=7,592,323,7,-39
+COff=7,1136,451,7,-39
 
 [Attr]
 ON=-25,-25,PART
@@ -461,14 +449,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=576,352,576,368
+Pxs=1120,480,1120,496
 
 [Wire]
-Pxs=576,368,576,376
+Pxs=1120,496,1120,504
 
 [Comp]
 Name=Capacitor
-Px=576,424
+Px=1120,552
 Rot=5
 
 [Attr]
@@ -485,9 +473,103 @@ Style=8192
 ON=0,0,PACKAGE
 V
 
+[Comp]
+Name=Resistor
+Px=496,432
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R1
+Style=8192
+
+[Attr]
+ON=-32,-39,RESISTANCE
+V=400
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Zener
+Px=496,536
+Rot=1
+
+[Attr]
+ON=16,11,PART
+V=Dz
+Style=8192
+
+[Attr]
+ON=16,25,VALUE
+V=15V
+Style=8192
+
+[Attr]
+ON=16,39,MODEL
+V=1N456A
+
+[Attr]
+ON=16,67,PACKAGE
+V=DO-35
+
+[Wire]
+Pxs=496,432,496,488
+
+[Wire]
+Pxs=496,584,496,624
+
+[Wire]
+Pxs=496,352,496,384
+
+[Wire]
+Pxs=320,352,496,352
+
+[Comp]
+Name=Battery
+Px=320,536
+Rot=3
+
+[Attr]
+ON=-26,-27,PART
+V=V2
+Style=8192
+
+[Attr]
+ON=-26,-41,VALUE
+V=16
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=320,352,320,488
+
+[Wire]
+Pxs=320,536,320,624
+
+[Wire]
+Pxs=320,624,496,624
+
+[Wire]
+Pxs=496,488,696,488
+
+[Wire]
+Pxs=696,264,696,488
+
+[Wire]
+Pxs=1120,552,1120,624
+
+[Wire]
+Pxs=496,488,496,536
+
 [Grid Text]
 Text="%"
-Px=616,264
+Px=1160,392
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -495,7 +577,28 @@ CBorder=None
 
 [Grid Text]
 Text="S_555"
-Px=456,232
+Px=1000,360
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Vs=15V"
+Px=720,584
+Height=-24
+Color=#000000
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="---->"
+Px=712,608
+Height=-32
+Color=#000000
+Angle=90
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -509,7 +612,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.5
+Scale=0.66666666666666663
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -697,9 +800,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,48
-Scale 3=0.7335473515248796
-Px=639,289
+SB 3=225,195
+Scale 3=0.66666666666666663
+Px=1166,640
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
