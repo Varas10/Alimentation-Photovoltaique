@@ -286,3 +286,22 @@ De plus, on as adapté le montage de façon à ce que la tensions puissent fourn
 ## Schéma et Routage Eagle
 
 ![[Schéma Eagle montage final.png]]![[Routage .png]]
+
+# Conclusion :
+## Technique :
+
+Le montage fonctionne très bien, cependant pour un utilisateur lambda, le réglage de la tension de sortie demande quelques compétences. 
+
+En effet, le réglage du potentiomètre demande un peu de précision car si l'utilisateur augmente trop rapidement le pourcentage du potentiomètre, la tension peut augmenter très rapidement et faire chauffer les composants ainsi que l'appareil qui est alimenté.
+Cela causerai une panne nécessitant une maintenance et la détérioration du téléphone/carte altéra.
+
+Pour remédié à cela, il aurais fallu ajouter un système automatique qui met le potentiomètre dans la bonne position. L'utilisateur aurais juste à appuyer sur un switch pour changer la tension de sortie.
+
+Donc notre système fonctionne très bien malgré son manque de simplicité d'utilisation qui pourrais empêcher une personne sans compétences en électronique de l'utiliser correctement.
+
+## Personnelle
+
+### RUIZ Evan :
+
+Ce projet m'as plu car j'ai pu développer mes compétences dans la conception d'un système.
+De plus, j'ai bien aimé le fait de trouver des solutions par moi-même.
