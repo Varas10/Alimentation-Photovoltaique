@@ -23,3 +23,12 @@ La fonction 1 permet de modifier la tensions de sortie.
 La fonction 2 permet d'envoyé les ordres à la partie puissance
 
 La fonction 3 permet d'adapter la tension du PV pour alimenter la partie commande. 
+
+# Schéma et Routage
+
+## Schéma spice
+
+![[Alimentation-Photovolta-que/Rapport par fonction/Montage global/Montage final.png]]
+
+## Schéma et Routage Eagle
+![[Schéma Eagle montage final.png]]![[Routage .png]]
