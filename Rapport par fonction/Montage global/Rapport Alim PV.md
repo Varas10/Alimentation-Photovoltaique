@@ -305,3 +305,8 @@ Donc notre système fonctionne très bien malgré son manque de simplicité d'ut
 
 Ce projet m'as plu car j'ai pu développer mes compétences dans la conception d'un système.
 De plus, j'ai bien aimé le fait de trouver des solutions par moi-même.
+Par rapport au premier semestre je pense m'être améliorer dans la rédaction des rapports, j'ai veillais à mettre plus de phrase tout en gardant l'intégration d'images et tableaux permettant de simplifier la lecture des résultats.
+
+Si on me demandai de le refaire je pense que j'aurais utiliser la même méthode, cependant j'aurais prévus beaucoup plus de marge pour le calcul des résistances. En effet, à plusieurs reprise on as du recalculé la valeur des résistances car les rapports cyclique théorique était bien loin de la pratique.
+
+J'aurais utilisé les même logiciel et fait les mêmes simulations car elles nous ont permis de mieux comprendre le fonctionnement de chaque fonction et des composants les intégrants.
