@@ -12,7 +12,9 @@ Dans le montage nous avons :
 - et enfin, la charge qui alimente la carte altéra ou le téléphone.
 
 # Cahier des charges 
+Le montage doit alimenter un téléphone portable, et un "chenillard numérique" à microprocesseur, c'est à dire une carte Altéra. L'alimentation ce fait grâce à un panneau solaire.
 
+# Spécifications 
 
 # Schéma fonctionnelle
 
