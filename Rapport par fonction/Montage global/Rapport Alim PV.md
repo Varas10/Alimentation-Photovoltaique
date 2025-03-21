@@ -4,18 +4,17 @@ TALENT Julien & RUIZ Evan
 ## Présentation général du montage :
 
 
-
 ![[Montage final.png]]
 
 Dans le montage nous avons : 
-- la source qui est le panneau solaire;
-- l'alimentation de la partie commande (fonction 3);
-- l'oscillateur qui est la partie commande;
-- le hacheur qui est la partie puissance;
-- et enfin, la charge qui alimente la carte altéra ou le téléphone.
+- la *source* qui est le panneau solaire;
+- l'*alimentation* de la partie commande (fonction 3);
+- *l'oscillateur* qui est la partie commande;
+- le *hacheur* qui est la partie puissance;
+- et enfin, la *charge* qui alimente la carte altéra ou le téléphone.
 
 ## Cahier des charges 
-Le montage doit alimenter un téléphone portable, et un "chenillard numérique" à microprocesseur, c'est à dire une carte Altéra. L'alimentation ce fait grâce à un panneau solaire.
+Le montage doit *alimenter un téléphone portable*, et *un "chenillard numérique"* à microprocesseur, c'est à dire une carte Altéra. L'alimentation ce fait *grâce à un panneau solaire*.
 
 ![[Cahier des charges images du système.png]]
 
@@ -23,30 +22,26 @@ Nous avons posés des questions au "client" et avons obtenue les spécifications
 ## Spécifications 
 
 
-Le panneau photovoltaïque peut délivré 10W au maximum. De plus, la tensions fournis par le panneau solaire doit être comprise entre 16V et 22V, tout dépend des rayonnements du soleil.
+Le panneau photovoltaïque *peut délivré 10W au maximum*. De plus, la tensions fournis par le panneau solaire doit être comprise *entre 16V et 22V*, tout dépend des rayonnements du soleil.
 
-Ensuite, on veut régler la tensions de sortie avec un potentiomètre. La tensions de sortie doit être comprise entre 5V, 1A afin de charger un téléphone portable en USB; ou 7,5V, 0,8A afin d'alimenter une carte à microprocesseur avec un câble coax.
+Ensuite, on veut régler la tensions de sortie avec un *potentiomètre.* La tensions de sortie doit être *comprise entre 5V, 1A* afin de charger un téléphone portable en USB; et *7,5V, 0,8A* afin d'alimenter une carte à microprocesseur avec un câble coax.
 
-Si le panneau solaire fournis une tension de 16V, la tensions de sortie doit être suffisante pour alimenter la carte, c'est à dire 7,5V.
+Si le panneau solaire fournis une tension de 16V, la *tensions de sortie doit être suffisante* pour alimenter la carte, c'est à dire 7,5V.
 
 ## Schéma fonctionnelle
 
 ![[Schéma fonctionelle.png]]
 
-La fonction 1 permet de modifier la tensions de sortie.
+La *fonction 1* permet de modifier la tensions de sortie.
 
-La fonction 2 permet d'envoyé les ordres à la partie puissance
+La *fonction 2* permet d'envoyé les ordres à la partie puissance
 
-La fonction 3 permet d'adapter la tension du PV pour alimenter la partie commande. 
-
-TALENT Julien et RUIZ Evan
+La *fonction 3* permet d'adapter la tension du PV pour alimenter la partie commande. 
 
 # Partie commande, l'oscillateur :
 ---
 
-
-
-Elle permet de choisir la tension de sortie en modulant la largeur de l'impulsion (la pwm).
+Elle permet de *choisir la tension de sortie* en *modulant la largeur de l'impulsion* (la pwm).
 
 ## Schéma :
 
