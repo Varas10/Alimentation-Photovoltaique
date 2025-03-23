@@ -190,7 +190,7 @@ Désormais on peut calculer $R_{1}$ :
 
 ### Simulations :
 
-On fait une simulation sur *Spice* avec l'analyse en **Dynamic DC** et on obtient les résultats suivant :
+On fait une simulation sur Spice avec l'analyse en *Dynamic DC* et on obtient les résultats suivant :
 
 | Tension du panneau | Vs (en V) | $I_{osc}$ (absorbé) (en mA) | $I_{R_{Z}}$ (en mA) | $I_{z}$ (en pA) | $P_{absorbé}$ (en mW) |
 | ------------------ | --------- | --------------------------- | ------------------- | --------------- | --------------------- |
@@ -228,8 +228,12 @@ On respecte bien le cahier des charges !
 D'après le schéma et l'analyse transient la tensions de sortie du 555 est toujours de 24mV lorsque le panneau varie entre 16v et 22V. Cela explique pourquoi le rapport cyclique et la fréquence ne changent pas.
 oscillateur 
 
-## Etude en pratique de tout le montage
+# Etude de tout le montage
 
+## En théorie
+
+
+## En pratique
 ### Schéma :
 
 ![[Montage final.png]]
@@ -282,11 +286,11 @@ De plus, on as adapté le montage de façon à ce que la tensions puissent fourn
 ## Schéma spice
 
 ![[Alimentation-Photovolta-que/Rapport par fonction/Montage global/Montage final.png]]
-
+La partie "alim.commande" et "oscillateur" sont assemblé par nous-mêmes tandis que la partie hacheur nous est déjà fournis sur une carte appart.
 ## Schéma et Routage Eagle
 
 ![[Schéma Eagle montage final.png]]![[Routage .png]]
-
+Nous utilisions des special_drill_banane pour utiliser des câbles bananes afin de la faire la connexion entre la carte commande et la carte puissance.
 # Conclusion :
 ## Technique :
 
