@@ -38,6 +38,8 @@ La *fonction 2* permet d'envoyé les ordres à la partie puissance
 
 La *fonction 3* permet d'adapter la tension du PV pour alimenter la partie commande. 
 
+TALENT Julien et RUIZ Evan
+
 # Partie commande, l'oscillateur :
 ---
 
@@ -228,7 +230,7 @@ On respecte bien le cahier des charges !
 D'après le schéma et l'analyse transient la tensions de sortie du 555 est toujours de 24mV lorsque le panneau varie entre 16v et 22V. Cela explique pourquoi le rapport cyclique et la fréquence ne changent pas.
 oscillateur 
 
-# Etude de tout le montage
+# Etude de tout le montage :
 
 ## En théorie
 
