@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "F3 - Alim de la commande/Rapport F3 (Alimentation partie commande).md",
+                "file": "F1 - Partie puissance/Sans titre.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rapport F3 (Alimentation partie commande)"
+              "title": "Sans titre"
             }
           }
         ]
@@ -170,6 +170,13 @@
   },
   "active": "60a84eada38731df",
   "lastOpenFiles": [
+    "F1 - Partie puissance/Rapport partie puissance.md",
+    "F1 - Partie puissance/Sans titre.md",
+    "F1 - Partie puissance/montage hacheur.png",
+    "F1 - Partie puissance/Courbes hacheur.png",
+    "F1 - Partie puissance/Pasted image 20250326093924.png",
+    "F3 - Alim de la commande/Rapport F3 (Alimentation partie commande).md",
+    "F1 - Partie puissance",
     "Montage global/Schéma fonctionelle.png",
     "Montage global/Schéma Eagle montage final.png",
     "Montage global/Rapport Alim PV.md",
