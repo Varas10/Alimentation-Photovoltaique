@@ -1,6 +1,8 @@
 TALENT Julien & RUIZ Evan
+
+# Rapport alimentation photovoltaïque
 # 1. Introduction :
-## **Présentation général du montage :**
+## Présentation général du montage :
 
 ![[Montage final.png]]
 
@@ -11,20 +13,20 @@ Dans le montage nous avons :
 - le *hacheur* qui est la partie puissance;
 - et enfin, la *charge* qui alimente la carte altéra ou le téléphone.
 
-## **Cahier des charges** 
+## Cahier des charges 
 Le montage doit *alimenter un téléphone portable*, et *un "chenillard numérique"* à microprocesseur, c'est à dire une carte Altéra. L'alimentation ce fait *grâce à un panneau solaire*.
 
 ![[Cahier des charges images du système.png]]
 
 Nous avons posés des questions au "client" et avons obtenue les spécifications ci dessous :
-## **Spécifications** 
+## Spécifications
 Le panneau photovoltaïque *peut délivré 10W au maximum*. De plus, la tension fournis par le panneau solaire doit être comprise *entre 16V et 22V*, tout dépend des rayonnements du soleil.
 
 Ensuite, on veut régler la tension de sortie avec un *potentiomètre.* La tension de sortie doit être *comprise entre 5V, 1A* afin de charger un téléphone portable en USB; et *7,5V, 0,8A* afin d'alimenter une carte à microprocesseur avec un câble coax.
 
 Si le panneau solaire fournis une tension de 16V, la *tension de sortie doit être suffisante* pour alimenter la carte, c'est à dire 7,5V.
 
-## **Schéma fonctionnelle**
+## Schéma fonctionnelle
 
 ![[Schéma fonctionelle.png]]
 
@@ -34,23 +36,20 @@ La *fonction 2* permet d'envoyé les ordres à la partie puissance
 
 La *fonction 3* permet d'adapter la tension du PV pour alimenter la partie commande. 
 
-TALENT Julien et RUIZ Evan
-
-TALENT Julien et RUIZ Evan  
 # 2. Rapport du hacheur :  
 
-## **Rôle de la fonction**  
+## Rôle de la fonction  
 
 Le rôle du hacheur est d'adapter la tension de sortie en fonction d'un signal carré de type PWM.  
 Il sera utilisé pour produire les tensions suivantes :  
 * **5V** avec un rapport cyclique de **25%** pour un téléphone  
 * **7,5V** avec un rapport cyclique de **37,5%** pour une carte Altera DE1  
 
-## **Schéma**  
+## Schéma  
 
 ![[montage hacheur.png]]  
 
-## **Fonctionnement**  
+## Fonctionnement  
 
 V1 représente le panneau photovoltaïque (PV), qui sera simulé par un générateur, et Vcom est notre générateur de PWM, qui sera un GBF lors du test de la carte.  
 
@@ -62,9 +61,10 @@ $$ V_{sortie} = V_1 \times rapport\_cyclique $$
 
 Le condensateur et la bobine permettent de lisser le signal de sortie afin d'obtenir uniquement la tension moyenne du signal.  
 
-## **Simulation**  
+## Simulation
 
 ### Simulation en régime transitoire pour une sortie de 5V  
+
 ![[Courbes hacheur.png]]  
 
 >Sur la courbe du haut, on peut voir le signal de commande du hacheur avec un rapport cyclique de **25%**.  
@@ -72,7 +72,7 @@ Le condensateur et la bobine permettent de lisser le signal de sortie afin d'obt
 
 La tension de sortie observée devrait être de **5V**, mais sur ces courbes de simulation, on constate qu’elle atteint **6V**, soit une valeur plus élevée que prévu. Cette différence est due au **temps de commutation du transistor de puissance**, qui est relativement lent et entraîne une augmentation du rapport cyclique effectif.  
 
-## **Conclusion**  
+## Conclusion
 
 Ce rapport présente le fonctionnement et la simulation d’un hacheur permettant d’abaisser une tension d’entrée en fonction d’un signal PWM.  
 L’analyse des résultats montre que la tension obtenue en sortie est légèrement supérieure à la valeur théorique attendue. Cette différence s’explique par la lenteur du transistor de puissance, qui modifie le rapport cyclique effectif.  
@@ -89,11 +89,11 @@ Malgré cette légère différence, la simulation valide bien le principe du hac
 
 Elle permet de générer un signal carrée avec un rapport cyclique variable pour contrôler le hacheur.
 
-## **Schéma :**
+## Schéma :
 
 ![[Pasted image 20250316112551.png]] 
 
-## **Fonctionnement :**
+## Fonctionnement :
 
 Grâce au potentiomètre on peut modifier la largeur des impulsion ce qui permet de modifier le rapport cyclique.
 
@@ -101,7 +101,7 @@ La diode fait passer le courant jusqu'au condensateur lorsqu'il est en charge.
 
 En charge le courant passe par RA et la diode, et en décharge il passe par RB et va dans le 555
 
-## **Choix des résistances :**
+## Choix des résistances :
 
 Afin de choisir les résistances adéquats, nous avons procédé à une série de calculs : 
 
@@ -122,7 +122,7 @@ Normalement si on additionne RA et RB du 5v on doit obtenir la même valeur que 
 
 Ici c'est bien le cas donc les résistances sont adaptées à notre système.
 
-### *Simulation avec RA et RB :*
+### Simulation avec RA et RB :
 
 |           | RA normalisée | Rb normalisée | rapport cyclique que l'on devrait obtenir | rapport cyclique vaec la simulation |
 | --------- | ------------- | ------------- | ----------------------------------------- | ----------------------------------- |
@@ -130,14 +130,14 @@ Ici c'est bien le cas donc les résistances sont adaptées à notre système.
 | VS = 7.5V | 15k$\ohm$     | 22k$\ohm$     | 41%                                       | 43%                                 |
 On constate que la simulation est proche du résultats que l'on attendait.
 
-## **Ajout d'un potentiomètre** :
+## Ajout d'un potentiomètre :
 
-### *Schéma :*
+### Schéma :
 
 ![[Pasted image 20250316100859.png]]
 On ajoute un potentiomètre afin de moduler la fréquence d'oscillation de la PWM et donc de faire varier le rapport cyclique.
 
-### *Rapport cyclique théorique*
+### Rapport cyclique théorique
 
 | évolution de la tension par rapport à l'ensolellement | il faut malgré tout avoir une tension en sortie du hacheur VS de : | rapport cyclique correspondant | position du potentiomètre |
 | ----------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------ | ------------------------- |
@@ -150,7 +150,7 @@ Ensuite, on doit atteindre un rapport cyclique maximal de 47% lorsque le potenti
 Cependant, il faut prévoir une marge d'environ 10% de rapport cyclique :
 - 23% --> 13%
 - 47% --> 57%
-### *Calcul de RA et Rb en fonction du rapport cyclique.*
+### Calcul de RA et Rb en fonction du rapport cyclique.
 
 On utilise la formule suivante :
 - $RA=\frac{\alpha_{min}*P}{\alpha_{max-\alpha_{min}}}$ 
@@ -164,7 +164,7 @@ avec
 RA = 6.4k$\ohm$ , valeur normalisée : 6.8k$\ohm$ 
 RB = 17k$\ohm$ , valeur normalisée : 18k$\ohm$ 
 
-### *Simulation :*
+### Simulation :
 
 pour V1=16v ou pour V1=22V, les rapports cyclique et tensions de sortie sont identique.
 
@@ -174,9 +174,9 @@ pour V1=16v ou pour V1=22V, les rapports cyclique et tensions de sortie sont ide
 | Basse (x=100%)            | 48%                     | 50%                      | 39,5kHz                          |
 
 Donc on as des rapports cyclique cohérent avec la théorie cependant la marge n'est pas assez grande. On verra par la suite comment ajouter de la marge.
-## **Mesures**
+## Mesures
 
-### *Problème !*
+### Problème !
 
 Notre coupe RA-RB nous empêchez de descendre en dessous de 26% de rapport cyclique or on souhaite définir un rapport cyclique de 20% donc on change les résistances.
 
@@ -185,7 +185,7 @@ On obtient
 On utiliseras des résistances normalisées E12 : 
 - RA = 3.9k$\ohm$ et Rb = 15k$\ohm$.
 
-### *P en position basse(Potentiomètre à 100%) :*
+### P en position basse(Potentiomètre à 100%) :
 
 En position basse, le rapport cyclique doit être maximal 
 #### calculs : 
@@ -196,7 +196,7 @@ En position basse, le rapport cyclique doit être maximal
 | descend    | bas pendant 10.8$\micro$s            | $t_{2}=0.693RB*C = 10.3\micro s$   |                               |                              |
 
 La marge n'est pas assez grande mais le rapport cyclique reste supérieur à ce que l'on attendait.
-### *P en position haute(Potentiomètre à 0%) :
+### P en position haute(Potentiomètre à 0%) :
 
 En position haute, le rapport cyclique doit être le minimum voulu :
 
@@ -208,7 +208,7 @@ En position haute, le rapport cyclique doit être le minimum voulu :
 | descend    | bas pendant 16.4$\micro$s            | $t_{2}=0.693RB*C = 17.3\micro s$   |                               |                              |
 Le rapport cyclique est trop élevé, il va falloir corrigé pour l'adapter au cahier des charges.
 Pour cela on modifiera les résistances RA et RB.
-## **Conclusion :**
+## Conclusion :
 Donc nous avons assemblé la partie commande :
 - Grâce à la PWM, on peut adapté le rapport cyclique par rapport à nos besoins(20% - > 50%).
 - De plus, les résistances choisis sont calculer pour obtenir une tension de sortie adéquate.
@@ -222,15 +222,15 @@ La fonction 3 permet d'adapter la tension des panneau solaire afin d'alimenter l
 - En effet, la partie commande doit être alimenter en 15V, pour cela on se sert de la fonction 3 pour maintenir une tension de sortie de minimum 15V à partir du panneau solaire. 
 
 - De plus, la puissance consommé doit être petite par rapport à celle fourni par le panneau.
-## **Etude de la fonction 3 seule :**
+## Etude de la fonction 3 seule :
 
-### *Schéma :*
+### Schéma :
 
 Voici le schéma que l'on vas utiliser pour les simulations :
 ![[F3 seule.png]]
 
 La diode Zener est en parallèle avec la résistance équivalente de l'oscillateur. La diode Zener étant à 15V, la tension de sortie Vs seras elle aussi à 15V.
-### *Calculs des résistances*
+### Calculs des résistances
 
 #### Calcul de Req :
 
@@ -250,7 +250,7 @@ Désormais on peut calculer $R_{1}$ :
 - $R_{1}=\frac{V_{1}-V_{z}}{I_{z}+I_{osc}}=\frac{16-15}{(1+1,5)*10^{-3}}=400\ohm$ 
 
 
-### *Simulations :*
+### Simulations :
 
 On fait une simulation sur Spice avec l'analyse en *Dynamic DC* et on obtient les résultats suivant :
 
@@ -265,16 +265,16 @@ De plus, la puissance fourni par le panneau solaire est presque entièrement abs
 Par contre on rencontre un problème :
 - Le courant passant dans la diode Zener est largement inférieur à 1mA alors qu'il doit être au minimum de 1mA.
 
-## **Etude de la fonction 3 relié à la partie commande**
+## Etude de la fonction 3 relié à la partie commande
 
-### **Schéma :**
+### Schéma :
 
 On va simulé ce montage :
 ![[F3 relié à F2.png]]
 
 On remplace la résistance équivalent de l'oscillateur par le montage oscillateur. La diode Zener est bien en parallèle avec le montage oscillateur.
 
-### **Simulation :**
+### Simulation :
 
 On va simulé avec l'analyse transient pour observé le comportement des deux fonctions ensemble :
 
@@ -292,22 +292,22 @@ oscillateur
 
 # 5. Etude de tout le montage  :
 
-## **Schéma :**
+## Schéma :
 
 ![[Montage final.png]]
 
 On relie les 3 fonctions entre elles, on retire la résistance $R_{osc}$ car elle correspond à la résistance équivalente de l'oscillateur.
 Il faut brancher la sortie du 555 (S_555) à RbQ2, là ou était placé Vcom, en effet, l'oscillateur représente la partie commande.
 
-## **Simulation**
+## Simulation
 
 | Tensions extrême des panneaux | Tension de sortie  |
 | ----------------------------- | ------------------ |
 | 16V                           | Entre 4,6V et 7,6V |
 | 22V                           | Entre 280mV et 10V |
 La tension de sortie lorsque le panneau est à 16V est de maximum 7,6V. On est un peu juste, on vérifiera lors de l'essai que la tension est bien supérieur à 7,5V sinon il faudra refaire les calculs des résistances.
-## **Essai en pratique** :
-### *Problème avec les rapports cyclique :*
+## Essai en pratique :
+### Problème avec les rapports cyclique :
 
 Lorsque nous avons fait les essais, nous n'arrivions plus à atteindre les rapports cyclique nécessaire car la partie puissance l'augmentais.
 
@@ -317,7 +317,7 @@ Alors on as du refaire tout les calculs pour Ra et Rb :
 - $R_{A} = \frac{\alpha_{min*P}}{\alpha_{max}-\alpha_{min}}= 204\ohm$, on utilise une résistance normalisé E12 de 220 $\ohm$;
 - $R_{B}=\frac{R_{a}-\alpha_{min}(R_{a}+P)}{\alpha_{min}}=9800\ohm$, on utilise une résistance normalisé E12 de 10k$\ohm$.
 
-### *Nouveau rapports cycliques obtenue :*
+### Nouveau rapports cycliques obtenue :
 
 lorsque le panneau est à 16V on as :
 - un rapport cyclique minimum de 8,7%<<25%,
@@ -325,12 +325,12 @@ lorsque le panneau est à 16V on as :
 
 L'intervalle des rapports cycliques corresponds bien au cahier des charges !
 
-### *Mise en garde :*
+### Mise en garde :
 
 ATTENTION, le rapport cyclique maximal ne doit pas être trop grand devant le rapport cyclique maximal demandé car il y a un risque de bruler des composants. 
 Il faut donc vérifier que les composant supportes la tension reçu lorsque on augmente le potentiomètre.
 
-## **Validation de l'ensemble du montage**
+## Validation de l'ensemble du montage
 
 Le montage finale fonctionne très bien : le potentiomètre permet d'obtenir un intervalle de tension de sortie comprenant les tensions nécessaire à l'alimentation de la carte Altéra et du Téléphone.
 
@@ -344,23 +344,23 @@ On atteint les 7,5V nécessaire à l'alimentation de la carte Altera. De plus on
 
 Le montage est donc validé, il peut être utilisé sans aucun problème.
 
-## **Conclusion**
+## Conclusion
 
 On est dorénavant capable de fournir une tension nécessaire à l'alimentation d'un téléphone ou d'une carte altéra avec un seule panneau solaire.
 
 De plus, on as adapté le montage de façon à ce que la tension puissent fournir la charge nécessaire afin de respecter le cahier des charges : Vs = 7,5V et Vs=5V
 # 6. Schéma et Routage :
 
-## **Schéma spice**
+## Schéma spice
 
 ![[Alimentation-Photovoltaique/Rapport par fonction/Montage global/Montage final.png]]
 La partie "alim.commande" et "oscillateur" sont assemblés par nous-mêmes tandis que la partie hacheur nous est déjà fournis sur une carte appart.
-## **Schéma et Routage Eagle**
+## Schéma et Routage Eagle
 
 ![[Schéma Eagle montage final.png]]![[Routage .png]]
 Nous utilisons des special_drill_banane pour utiliser des câbles bananes afin de faire la connexion entre la carte commande et la carte puissance.
 # 7. Conclusion :
-## **7.1) Technique :**
+## 7.1) Technique :
 
 ### 7.1)a) Résumé du projet
 
@@ -393,7 +393,7 @@ Les résultats finaux **correspondent aux attentes**. Nous avons réussi à obte
 
 Donc notre système fonctionne très bien malgré son manque de simplicité d'utilisation qui pourrais empêcher une personne sans compétences en électronique de l'utiliser correctement.
 
-## **7.2) Personnelle**
+## 7.2) Personnelle
 
 ### RUIZ Evan :
 
@@ -407,15 +407,15 @@ J'aurais utilisé les même logiciel et fait les mêmes simulations car elles no
 
 ### TALENT Julien :
 
-#### **Intérêt du projet**
+#### Intérêt du projet
 
 Ce projet a été **très intéressant**, car il m’a permis de découvrir le fonctionnement d’une alimentation à découpage et de **concevoir un oscillateur**.
 
-#### **Apports techniques et personnels**
+#### Apports techniques et personnels
 
 J’ai gagné en autonomie pour la réalisation de futurs projets et je me sens **plus confiant dans ma capacité à mener un projet à bien**.
 
-#### **Améliorations possibles**
+#### Améliorations possibles
 
 Si je devais refaire ce projet, je prendrais plus de temps pour réfléchir aux **tolérances des composants** à prendre en compte.
 
@@ -428,6 +428,6 @@ Pour améliorer le système, il serait intéressant de :
 - **Ajouter un interrupteur de sélection** pour choisir l’appareil à alimenter (téléphone ou carte Altera DE1) sans besoin de réglage manuel.
     
 
-#### **Conclusion**
+#### Conclusion
 
 Ce projet a été une **expérience enrichissante** tant sur le plan technique que personnel. Il m’a permis de mettre en application des notions théoriques et d’améliorer ma méthodologie de travail. Avec quelques améliorations, cette alimentation pourrait être plus ergonomique et accessible à un utilisateur non expérimenté.
