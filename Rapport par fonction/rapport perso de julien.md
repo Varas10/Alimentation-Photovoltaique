@@ -30,7 +30,6 @@ Le projet s'est déroulé conformément au plan initial. Nous avons adopté une 
 Les résultats finaux **correspondent aux attentes**. Nous avons réussi à obtenir les tensions de sortie prévues en ajustant le rapport cyclique du signal PWM. Cependant, un problème notable a été identifié :
 
 - Le système conçu **n’est pas pratique pour un utilisateur lambda**, car il nécessite de **mesurer la tension de sortie avec un multimètre** et d’ajuster le rapport cyclique via un potentiomètre.
-    
 
 ## 4. Bilan personnel et perspectives d’amélioration
 
