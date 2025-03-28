@@ -1,5 +1,3 @@
-**DOCUMENT DE MAINTENANCE**
-
 # 1. Introduction
 
 Ce document décrit les procédures de maintenance pour le système d'alimentation photovoltaïque développé dans le cadre du projet. Il vise à assurer le bon fonctionnement du système sur le long terme en proposant des recommandations d'entretien, des procédures de diagnostic et des solutions aux problèmes courants.

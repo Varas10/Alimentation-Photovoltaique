@@ -6,7 +6,7 @@ TALENT Julien & RUIZ Evan
 - 5 câbles bananes
 
 ### Cartes :
-- Cartes routé regroupant la partie commande et l'alimentation de la partie commande.
+- Cartes routée regroupant la partie commande et l'alimentation de la partie commande.
 - Carte de la partie puissance.
 
 ### Multimètre
@@ -18,7 +18,6 @@ TALENT Julien & RUIZ Evan
 - Branchez le connecteur "Alim-" sur l'une des bornes M du Hacheur (partie puissance).
 - Branchez le connecteur "Alim+" sur la borne F du Hacheur.
 - Brancher le + du PV sur la borne A du Hacheur.
-
 - Branchez le multimètre sur la sortie du Hacheur.
 
 # Réglages 
